@@ -1,0 +1,257 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: #1a2238;
+  color: #eaeaea;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  margin-right: auto;
+  display: flex;
+  gap: 6px;
+}
+
+.logo-img {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+}
+
+.logo-title {
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+
+.logo-title :hover {
+  color: #5974b2;
+  transform: rotate(2deg);
+}
+
+.button-cta {
+  margin-right: 10px;
+  border: none;
+  font-size: 20px;
+  padding: 6px 12px;
+  background: #4665a4;
+  color: #eaeaea;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-cta:hover {
+  transform: scale(1.1); 
+}
+
+
+.Email {
+  margin-left: 19px;
+}
+
+nav ul {
+  display: flex;
+  padding: 20px;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+li a {
+  transition: all 0.5s ease 0s;
+  display: inline-block;
+}
+
+li a:hover {
+  color: #aec2f1;
+  transform: rotate(2deg);
+}
+
+a {
+  color: #eaeaea;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.img-foto {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  max-width: 500px;
+}
+
+.parallax {
+  background-image: url(FotoSemangat.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 105vh;
+}
+
+.tentang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #1a2238;
+  color: #eaeaea;
+  padding: 15px;
+}
+
+.mt-10 {
+  margin-top: 20px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 100px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out,
+  box-shadow 0.3s ease;
+}
+
+.card-item {
+  text-align: center;
+  width: 25%;
+  min-height: 200px;
+  max-height: 300px;
+  background: #f7f7f7;
+  color: #222;
+  padding: 24px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.card-description {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.icon {
+  width: 75px;
+  height: 75px;
+  margin: 10px;
+  padding: 4px;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #1a2238;
+  color: #eaeaea;
+}
+
+#contact {
+  scroll-margin-top: 250px; 
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+  }
+  .card-item {
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .intro {
+    margin-top: 20px;
+  }
+
+  .img-foto {
+    padding: 0;
+  }
+
+  nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #1a2238;
+    z-index: 9;
+  }
+
+  footer {
+    margin-bottom: 70px;
+    margin-top: 13px;
+  }
+}
+
+.logo-title {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
